@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Prey.gd" type="Script" id=1]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0001.png" type="Texture" id=2]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0002.png" type="Texture" id=3]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0003.png" type="Texture" id=4]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0004.png" type="Texture" id=5]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0005.png" type="Texture" id=6]
+[ext_resource path="res://sprites/fish_in_water/cirlceing/fish_circleing_0006.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "circleing",
+"speed": 3.0
+} ]
+
+[node name="Prey" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+lifespan = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+scale = Vector2( 1.72445, 1.74751 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="icon" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 4.85626, -16.8586 )
+z_index = 1
+frames = SubResource( 2 )
+animation = "circleing"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+

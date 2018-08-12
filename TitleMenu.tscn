@@ -1,0 +1,168 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TitleMenu.gd" type="Script" id=1]
+[ext_resource path="res://sprites/BearSprite.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://UITheme_smal.tres" type="Theme" id=3]
+[ext_resource path="res://UITheme.tres" type="Theme" id=4]
+
+[node name="TitleMenu" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 342.466, 189.487 )
+scale = Vector2( 2.98562, 2.33481 )
+frames = ExtResource( 2 )
+animation = "walkLeft"
+frame = 4
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 562.863, 207.104 )
+scale = Vector2( 1.42146, 1.11161 )
+frames = ExtResource( 2 )
+animation = "walkLeft"
+frame = 3
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( 701.621, 207.104 )
+scale = Vector2( 1.42146, 1.11161 )
+frames = ExtResource( 2 )
+animation = "walkLeft"
+frame = 3
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="3"]
+
+position = Vector2( 843.1, 207.104 )
+scale = Vector2( 1.42146, 1.11161 )
+frames = ExtResource( 2 )
+animation = "walkLeft"
+frame = 3
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 986.638, 211.205 )
+scale = Vector2( 1.42146, 1.11161 )
+frames = ExtResource( 2 )
+animation = "walkLeft"
+frame = 2
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 265.0
+margin_top = 269.0
+margin_right = 792.0
+margin_bottom = 439.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="VBoxContainer" index="0"]
+
+modulate = Color( 0.402344, 0.402344, 0.402344, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 26.0
+margin_right = 527.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+text = "help the bear to feed her cubs"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="VBoxContainer" index="1"]
+
+modulate = Color( 0.403922, 0.403922, 0.403922, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 77.0
+margin_right = 527.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "play"
+flat = true
+align = 1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="Button2" type="Button" parent="VBoxContainer" index="2"]
+
+modulate = Color( 0.403922, 0.403922, 0.403922, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 527.0
+margin_bottom = 170.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "credits"
+flat = true
+align = 1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_Button_button_down"]
+
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_Button2_button_down"]
+
+

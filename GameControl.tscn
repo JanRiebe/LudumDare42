@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameControl.gd" type="Script" id=1]
+[ext_resource path="res://Land.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/water.png" type="Texture" id=4]
+[ext_resource path="res://UITheme_smal.tres" type="Theme" id=5]
+[ext_resource path="res://UITheme.tres" type="Theme" id=6]
+
+[node name="GameControl" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+sceneFolder = "res://"
+numberOfPups = 5
+shrinkPerSecond = 30
+preySpawnRatePerSec = 0.1
+
+[node name="Land" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 514.315, 302.601 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="tex_Water" type="Sprite" parent="." index="2"]
+
+position = Vector2( 507.843, 461.323 )
+scale = Vector2( 0.521214, 0.473208 )
+texture = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+layer = 5
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="InputHint" type="Label" parent="CanvasLayer" index="0"]
+
+self_modulate = Color( 0.296875, 0.296875, 0.296875, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 193.0
+margin_top = 41.0
+margin_right = 1043.0
+margin_bottom = 119.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 5 )
+text = "press Enter to drop a fish"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Theme", "Visibility" ]
+
+[node name="Score" type="Label" parent="CanvasLayer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 29.0
+margin_right = 151.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 6 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+
