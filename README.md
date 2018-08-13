@@ -1,11 +1,14 @@
 # Mother Bear
 Help a polar bear feed her cubs!
 
-
-This is a game I made for Ludum Dare 42
+## This is a game I made for Ludum Dare 42.
 https://ldjam.com/events/ludum-dare/42/mother-bear
 
-Made with the Godot Game Engine
+## You can download a playable version for free from
+https://janriebe.itch.io/motherbear
+
+
+Made with the Godot Game Engine.
 godotengine.org
 
 
